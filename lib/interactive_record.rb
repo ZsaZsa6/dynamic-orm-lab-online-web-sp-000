@@ -56,8 +56,8 @@ class InteractiveRecord
   def self.find_by(attribute_hash)
       # attribute_hash.each do |key, value|
       #   self.send("#{key}"=, value)
-      name = attribute_hash.values.first
-      grade = attribute_hash.integer
+      value = attribute_hash.values.first
+      formatted_value = calue.class ==D
       binding.pry
     sql = "SELECT * FROM #{self.table_name} WHERE ? = ?"
     DB[:conn].execute(sql, key, value)
