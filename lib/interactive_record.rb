@@ -52,7 +52,7 @@ class InteractiveRecord
     DB[:conn].execute(sql, name)
   end
 
-  def self.find_by(attribute_hash)
+  def self.find_by(attribute_hash={})
       attribute_hash.each do |key, value|
         self.send("#{key}"=, value)
     sql = "SELECT * FROM #{self.table_name} WHERE ? = ?"
